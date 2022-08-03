@@ -21,6 +21,7 @@ Storage Items
 -------------------
 
 LiqPool contains total supply of tokens of pair token1:token2
+
 TokBal contains balance for each user
 
 Functions
