@@ -263,8 +263,27 @@ impl pallet_sudo::Config for Runtime {
 }
 
 /// Configure the pallet-template in pallets/template.
-impl pallet_template::Config for Runtime {
-	type Event = Event;
+// impl pallet_template::Config for Runtime {
+// 	type Event = Event;
+// 	type Token = Balances;
+// }
+
+impl pallet_assets::Config for Runtime {
+
+	type Event = ();
+	type Balance = ();
+	type AssetId = ();
+	type Currency = ();
+	type ForceOrigin = ();
+	type AssetDeposit = ();
+	type AssetAccountDeposit = ();
+	type MetadataDepositBase = ();
+	type MetadataDepositPerByte = ();
+	type ApprovalDeposit = ();
+	type StringLimit = ();
+	type Freezer = ();
+	type Extra = ();
+	type WeightInfo = ();
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.
@@ -283,7 +302,7 @@ construct_runtime!(
 		TransactionPayment: pallet_transaction_payment,
 		Sudo: pallet_sudo,
 		// Include the custom logic from the pallet-template in the runtime.
-		TemplateModule: pallet_template,
+		Assets: pallet_assets,
 	}
 );
 
