@@ -6,15 +6,11 @@ Written in Rust/Substrate/Frame
 
 The main file is 
 
-```shell
 src/lib.rs
-```
 
 to compile, use:
 
-```shell
 cargo check -p pallet-dex
-```
 
 
 Storage Items
